@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ashutosh Shekhar • Portfolio</title>
+
+  <meta name="description" content="Ashu — portfolio of projects in web, GenAI, and systems design." />
+  <meta name="theme-color" content="#0b0e1a" />
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;800&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+
+  <!-- Theme Styles -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <!-- Favicon & App Icons -->
+  <link rel="icon" href="assets/images/favicon.ico" sizes="any" />
+  <link rel="icon" href="assets/images/favicon.ico?v=3" sizes="any" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+</head>
+<body>
+  <div class="scroll-glow" aria-hidden="true"></div>
+
+  <!-- PRELOADER -->
+  <div id="preloader" aria-hidden="true">
+    <div class="pl-wrap">
+      <div class="pl-logo">
+        <i class="fa-solid fa-laptop-code"></i> Ashu
+      </div>
+
+      <div class="pl-lanes" aria-label="Initializing">
+        <span class="lane"></span>
+        <span class="lane"></span>
+        <span class="lane"></span>
+      </div>
+
+      <div class="pl-bar">
+        <div class="pl-fill" id="plFill" style="width: 0%"></div>
+      </div>
+
+      <div class="pl-meta">
+        <span id="plPct">0%</span> • routing traffic…
+      </div>
+    </div>
+    <noscript><style>#preloader{display:none}</style></noscript>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="nav" id="nav" aria-label="Primary">
+    <div class="brand">
+      <i class="fa-solid fa-laptop-code"></i> Portfolio.o
+    </div>
+
+    <button
+      class="hamburger"
+      id="menuBtn"
+      aria-label="Open Menu"
+      aria-expanded="false"
+      aria-controls="links"
+      type="button"
+    >
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <div class="links" id="links">
+      <a href="#home" class="active">Home</a>
+      <a href="#projects">Projects</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#techstack">Tech Stack</a>
+      <a class="cta" href="#connect">
+        <i class="fa-regular fa-paper-plane"></i> Connect
+      </a>
+
+      <a
+        class="icon-btn"
+        href="https://github.com/Asky03"
+        target="_blank"
+        rel="noopener"
+        aria-label="GitHub"
+      >
+        <i class="fa-brands fa-github"></i>
+      </a>
+
+      <a
+        class="icon-btn"
+        href="https://www.linkedin.com/in/ashutoshs27/"
+        target="_blank"
+        rel="noopener"
+        aria-label="LinkedIn"
+      >
+        <i class="fa-brands fa-linkedin-in"></i>
+      </a>
+    </div>
+  </nav>
+
+  <main>
+    <!-- HOME / HERO -->
+    <section class="page hero" id="home" aria-label="Hero">
+      <div class="container hero-inner">
+        <div>
+          <div class="tag reveal">Ashutosh Shekhar</div>
+          <h1 class="reveal">I design &amp; build.</h1>
+          <p class="lead reveal">
+            Working on Gen-AI models and exploring system design architecture.
+          </p>
+
+          <div class="pill-actions reveal">
+            <a class="btn primary" href="#projects">
+              <i class="fa-solid fa-bolt"></i> See Projects
+            </a>
+            <a class="btn" href="#connect">
+              <i class="fa-regular fa-comment-dots"></i> Connect
+            </a>
+          </div>
+        </div>
+
+        <aside class="feature-card reveal" aria-label="Highlights">
+          <strong>Highlights</strong>
+          <ul class="bullets">
+            <li>Working on Gen-AI models</li>
+            <li>Exploring system design &amp; architecture</li>
+          </ul>
+
+          <button class="view-projects-btn" id="view-projects-btn" type="button">
+            View Projects
+          </button>
+        </aside>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="page" id="projects" aria-label="Featured Projects">
+      <div class="container">
+        <h2 class="section-title reveal">Featured Projects</h2>
+
+        <div class="grid" role="list">
+          <article class="card reveal" role="listitem">
+            <a class="chip" href="https://www.ibm.com/think/topics/generative-ai" target="_blank" rel="noopener">Generative AI</a>
+            <h3>DocuAi</h3>
+            <p class="muted">Using AI model to generate summary info from different files.</p>
+            <div class="chips">
+              <a class="chip" href="https://docs.python.org/3/tutorial/index.html" target="_blank" rel="noopener">Python</a>
+              <a class="chip" href="https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2" target="_blank" rel="noopener">MiniLM (Embeddings)</a>
+              <a class="chip" href="https://huggingface.co/google/flan-t5-base" target="_blank" rel="noopener">Flan-T5 (LLM)</a>
+            </div>
+            <div class="actions">
+              <a class="btn small" href="https://github.com/Asky03/GenAimodel" target="_blank" rel="noopener">
+                <i class="fa-brands fa-github"></i> Code
+              </a>
+              <a class="btn small ghost" href="https://demo.example.com/coming..." target="_blank" rel="noopener">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Live
+              </a>
+            </div>
+          </article>
+
+          <article class="card reveal" role="listitem">
+            <a class="chip" href="https://www.cloudflare.com/learning/cloud/what-is-the-cloud/" target="_blank" rel="noopener">Cloud Computing</a>
+            <h3>A Secure Vault</h3>
+            <p class="muted">A local storing vault using SHA-256 encryption making it way more secure.</p>
+            <div class="chips">
+              <a class="chip" href="https://console.firebase.google.com/u/0/" target="_blank" rel="noopener">Firebase</a>
+              <a class="chip" href="https://console.firebase.google.com/u/0/" target="_blank" rel="noopener">AES</a>
+              <a class="chip" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noopener">JS</a>
+            </div>
+            <div class="actions">
+              <a class="btn small" href="https://github.com/Asky03/SCV01" target="_blank" rel="noopener">
+                <i class="fa-brands fa-github"></i> Code
+              </a>
+              <a class="btn small ghost" href="https://github.com/...coming soon" target="_blank" rel="noopener">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Live
+              </a>
+            </div>
+          </article>
+
+          <article class="card reveal" role="listitem">
+            <a class="chip" href="https://www.blockchain.com/" target="_blank" rel="noopener">Blockchain</a>
+            <h3>T3TRUST</h3>
+            <p class="muted">Micro-credit prototype with trust scoring and a mock ledger.</p>
+            <div class="chips">
+              <a class="chip" href="https://hardhat.org/docs/getting-started" target="_blank" rel="noopener">Hardhat</a>
+              <a class="chip" href="https://www.npmjs.com/package/truffle" target="_blank" rel="noopener">Truffle</a>
+              <a class="chip" href="https://nodejs.org/en/learn/getting-started/introduction-to-nodejs" target="_blank" rel="noopener">Node.js</a>
+            </div>
+            <div class="actions">
+              <a class="btn small" href="https://github.com/your-Asky03/t3trust" target="_blank" rel="noopener">
+                <i class="fa-brands fa-github"></i> Code
+              </a>
+              <a class="btn small ghost" href="coming soon ..." target="_blank" rel="noopener">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Live
+              </a>
+            </div>
+          </article>
+
+          <article class="card reveal" role="listitem">
+            <a class="chip" href="https://www.blockchain.com/" target="_blank" rel="noopener">Blockchain</a>
+            <h3>Decentralized Application (DApp)</h3>
+            <p class="muted">DApp built to store and update a greeting message on the Ethereum blockchain.</p>
+            <div class="chips">
+              <a class="chip" href="https://docs.soliditylang.org/en/v0.8.30/" target="_blank" rel="noopener">Solidity</a>
+              <a class="chip" href="https://docs.ethers.org/v5/" target="_blank" rel="noopener">Ethers.js v5</a>
+              <a class="chip" href="https://metamask.io/developer" target="_blank" rel="noopener">MetaMask</a>
+            </div>
+            <div class="actions">
+              <a class="btn small" href="https://github.com/Asky03/Greet-Dapp" target="_blank" rel="noopener">
+                <i class="fa-brands fa-github"></i> Code
+              </a>
+              <a class="btn small ghost" href="https://github.com/...coming soon" target="_blank" rel="noopener">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Live
+              </a>
+            </div>
+          </article>
+
+          <article class="card reveal" role="listitem">
+            <a class="chip" href="https://www.blockchain.com/" target="_blank" rel="noopener">Blockchain</a>
+            <h3>Kiranawala</h3>
+            <p class="muted">A local kirana (grocery management system) website for tier-3 cities connecting people.</p>
+            <div class="chips">
+              <a class="chip" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noopener">JavaScript</a>
+              <a class="chip" href="https://nodejs.org/docs/latest/api/synopsis.html" target="_blank" rel="noopener">Node.js</a>
+              <a class="chip" href="https://www.mongodb.com/" target="_blank" rel="noopener">MongoDB</a>
+            </div>
+            <div class="actions">
+              <a class="btn small" href="https://github.com/Asky03/Kiranawala-" target="_blank" rel="noopener">
+                <i class="fa-brands fa-github"></i> Code
+              </a>
+              <a class="btn small ghost" href="https://github.com/...coming soon" target="_blank" rel="noopener">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Live
+              </a>
+            </div>
+          </article>
+
+          <article class="card reveal" role="listitem">
+            <a class="chip" href="https://www.blockchain.com/" target="_blank" rel="noopener">Blockchain</a>
+            <h3>Decentralized Application (DApp)</h3>
+            <p class="muted">DApp built to store and update a greeting message on the Ethereum blockchain.</p>
+            <div class="chips">
+              <a class="chip" href="https://docs.soliditylang.org/en/v0.8.30/" target="_blank" rel="noopener">Solidity</a>
+              <a class="chip" href="https://docs.ethers.org/v5/" target="_blank" rel="noopener">Ethers.js v5</a>
+              <a class="chip" href="https://metamask.io/developer" target="_blank" rel="noopener">MetaMask</a>
+            </div>
+            <div class="actions">
+              <a class="btn small" href="https://github.com/Asky03/Greet-Dapp" target="_blank" rel="noopener">
+                <i class="fa-brands fa-github"></i> Code
+              </a>
+              <a class="btn small ghost" href="https://github.com/...coming soon" target="_blank" rel="noopener">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Live
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section class="page cert-section" id="certifications" aria-label="Certifications">
+      <div class="container">
+        <div class="cert-head reveal">
+          <div>
+            <h2 class="section-title">Certifications</h2>
+            <p class="muted cert-subtitle">
+              Scroll through certificates. Click the active one to flip and view details.
+            </p>
+          </div>
+
+          <div class="cert-vertical-controls">
+            <button class="cert-nav-vertical" id="certPrev" type="button" aria-label="Previous certificate">
+              <i class="fa-solid fa-chevron-up"></i>
+            </button>
+            <button class="cert-nav-vertical" id="certNext" type="button" aria-label="Next certificate">
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="cert-3d-wrap reveal">
+          <div class="cert-stack" id="certTrack">
+            <article class="cert-orbit-card is-active" tabindex="0" role="button">
+              <div class="cert-orbit-inner">
+                <div class="cert-orbit-face cert-orbit-front">
+                  <div class="cert-orbit-ring">
+                    <div class="cert-doc-icon"><i class="fa-regular fa-file-lines"></i></div>
+                    <h3>AWS Cloud</h3>
+                    <p>Cloud / AWS</p>
+                    <span class="cert-pill">Tap to flip</span>
+                  </div>
+                </div>
+                <div class="cert-orbit-face cert-orbit-back">
+                  <h4>AWS Cloud Architecture</h4>
+                  <ul>
+                    <li><strong>Issuer:</strong> AWS Academy</li>
+                    <li><strong>Year:</strong> 2026</li>
+                    <li><strong>Skills:</strong> EC2, S3, IAM, VPC</li>
+                    <li><strong>Status:</strong> Completed</li>
+                  </ul>
+                  <a class="btn small" href="#" target="_blank" rel="noopener">
+                    <i class="fa-regular fa-file-pdf"></i> View Certificate
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="cert-orbit-card" tabindex="0" role="button">
+              <div class="cert-orbit-inner">
+                <div class="cert-orbit-face cert-orbit-front">
+                  <div class="cert-orbit-ring">
+                    <div class="cert-doc-icon"><i class="fa-regular fa-file-lines"></i></div>
+                    <h3>GenAI Prompt Engineering</h3>
+                    <p>Generative AI</p>
+                    <span class="cert-pill">Tap to flip</span>
+                  </div>
+                </div>
+                <div class="cert-orbit-face cert-orbit-back">
+                  <h4>GenAI Prompt Engineering</h4>
+                  <ul>
+                    <li><strong>Issuer:</strong> Course Platform</li>
+                    <li><strong>Year:</strong> 2025</li>
+                    <li><strong>Skills:</strong> Prompting, LLM workflows</li>
+                    <li><strong>Status:</strong> Completed</li>
+                  </ul>
+                  <a class="btn small" href="#" target="_blank" rel="noopener">
+                    <i class="fa-regular fa-file-pdf"></i> View Certificate
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="cert-orbit-card" tabindex="0" role="button">
+              <div class="cert-orbit-inner">
+                <div class="cert-orbit-face cert-orbit-front">
+                  <div class="cert-orbit-ring">
+                    <div class="cert-doc-icon"><i class="fa-regular fa-file-lines"></i></div>
+                    <h3>Network Security</h3>
+                    <p>Networking / Security</p>
+                    <span class="cert-pill">Tap to flip</span>
+                  </div>
+                </div>
+                <div class="cert-orbit-face cert-orbit-back">
+                  <h4>Networking Fundamentals</h4>
+                  <ul>
+                    <li><strong>Issuer:</strong> Cisco / Oracle</li>
+                    <li><strong>Year:</strong> 2026</li>
+                    <li><strong>Skills:</strong> IP, Routing, Switching</li>
+                    <li><strong>Status:</strong> Completed</li>
+                  </ul>
+                  <a class="btn small" href="#" target="_blank" rel="noopener">
+                    <i class="fa-regular fa-file-pdf"></i> View Certificate
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="cert-orbit-card" tabindex="0" role="button">
+              <div class="cert-orbit-inner">
+                <div class="cert-orbit-face cert-orbit-front">
+                  <div class="cert-orbit-ring">
+                    <div class="cert-doc-icon"><i class="fa-regular fa-file-lines"></i></div>
+                    <h3>Git &amp; GitHub</h3>
+                    <p>Version Control</p>
+                    <span class="cert-pill">Tap to flip</span>
+                  </div>
+                </div>
+                <div class="cert-orbit-face cert-orbit-back">
+                  <h4>Git &amp; GitHub</h4>
+                  <ul>
+                    <li><strong>Issuer:</strong> Workshop / Training</li>
+                    <li><strong>Year:</strong> 2025</li>
+                    <li><strong>Skills:</strong> Branching, PR, Merge</li>
+                    <li><strong>Status:</strong> Completed</li>
+                  </ul>
+                  <a class="btn small" href="#" target="_blank" rel="noopener">
+                    <i class="fa-regular fa-file-pdf"></i> View Certificate
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="cert-orbit-card" tabindex="0" role="button">
+              <div class="cert-orbit-inner">
+                <div class="cert-orbit-face cert-orbit-front">
+                  <div class="cert-orbit-ring">
+                    <div class="cert-doc-icon"><i class="fa-regular fa-file-lines"></i></div>
+                    <h3>Cloud Security</h3>
+                    <p>Security / Cloud</p>
+                    <span class="cert-pill">Tap to flip</span>
+                  </div>
+                </div>
+                <div class="cert-orbit-face cert-orbit-back">
+                  <h4>Cloud Security Essentials</h4>
+                  <ul>
+                    <li><strong>Issuer:</strong> AWS / Security Program</li>
+                    <li><strong>Year:</strong> 2026</li>
+                    <li><strong>Skills:</strong> IAM, Monitoring, Protection</li>
+                    <li><strong>Status:</strong> Completed</li>
+                  </ul>
+                  <a class="btn small" href="#" target="_blank" rel="noopener">
+                    <i class="fa-regular fa-file-pdf"></i> View Certificate
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="cert-orbit-card" tabindex="0" role="button">
+              <div class="cert-orbit-inner">
+                <div class="cert-orbit-face cert-orbit-front">
+                  <div class="cert-orbit-ring">
+                    <div class="cert-doc-icon"><i class="fa-regular fa-file-lines"></i></div>
+                    <h3>Frontend Development</h3>
+                    <p>Web / UI</p>
+                    <span class="cert-pill">Tap to flip</span>
+                  </div>
+                </div>
+                <div class="cert-orbit-face cert-orbit-back">
+                  <h4>Frontend Development</h4>
+                  <ul>
+                    <li><strong>Issuer:</strong> Training Platform</li>
+                    <li><strong>Year:</strong> 2025</li>
+                    <li><strong>Skills:</strong> HTML, CSS, JS, UI</li>
+                    <li><strong>Status:</strong> Completed</li>
+                  </ul>
+                  <a class="btn small" href="#" target="_blank" rel="noopener">
+                    <i class="fa-regular fa-file-pdf"></i> View Certificate
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TECH STACK -->
+    <section class="page tech-section" id="techstack" aria-label="Tech Stack">
+      <div class="container">
+        <h2 class="section-title reveal">Tech Stack</h2>
+        <p class="muted reveal cert-subtitle">
+          Tools and technologies I use across development, cloud, AI, and security.
+        </p>
+      </div>
+
+      <div class="tech-horizontal-wrap reveal">
+        <div class="tech-horizontal-track">
+          <div class="tech-chip tech-html"><i class="fa-brands fa-html5"></i><span>HTML5</span></div>
+          <div class="tech-chip tech-css"><i class="fa-brands fa-css3-alt"></i><span>CSS3</span></div>
+          <div class="tech-chip tech-js"><i class="fa-brands fa-js"></i><span>JavaScript</span></div>
+          <div class="tech-chip tech-react"><i class="fa-brands fa-react"></i><span>React</span></div>
+          <div class="tech-chip tech-node"><i class="fa-brands fa-node-js"></i><span>Node.js</span></div>
+          <div class="tech-chip tech-python"><i class="fa-brands fa-python"></i><span>Python</span></div>
+          <div class="tech-chip tech-aws"><i class="fa-brands fa-aws"></i><span>AWS</span></div>
+          <div class="tech-chip tech-git"><i class="fa-brands fa-github"></i><span>GitHub</span></div>
+          <div class="tech-chip tech-db"><i class="fa-solid fa-database"></i><span>MongoDB</span></div>
+          <div class="tech-chip tech-fire"><i class="fa-solid fa-fire"></i><span>Firebase</span></div>
+          <div class="tech-chip tech-cloud"><i class="fa-solid fa-cloud"></i><span>Cloud</span></div>
+          <div class="tech-chip tech-shield"><i class="fa-solid fa-shield-halved"></i><span>Security</span></div>
+          <div class="tech-chip tech-brain"><i class="fa-solid fa-brain"></i><span>GenAI</span></div>
+          <div class="tech-chip tech-chain"><i class="fa-solid fa-cube"></i><span>Blockchain</span></div>
+          <div class="tech-chip tech-arch"><i class="fa-solid fa-diagram-project"></i><span>Architecture</span></div>
+
+          <div class="tech-chip tech-html"><i class="fa-brands fa-html5"></i><span>HTML5</span></div>
+          <div class="tech-chip tech-css"><i class="fa-brands fa-css3-alt"></i><span>CSS3</span></div>
+          <div class="tech-chip tech-js"><i class="fa-brands fa-js"></i><span>JavaScript</span></div>
+          <div class="tech-chip tech-react"><i class="fa-brands fa-react"></i><span>React</span></div>
+          <div class="tech-chip tech-node"><i class="fa-brands fa-node-js"></i><span>Node.js</span></div>
+          <div class="tech-chip tech-python"><i class="fa-brands fa-python"></i><span>Python</span></div>
+          <div class="tech-chip tech-aws"><i class="fa-brands fa-aws"></i><span>AWS</span></div>
+          <div class="tech-chip tech-git"><i class="fa-brands fa-github"></i><span>GitHub</span></div>
+          <div class="tech-chip tech-db"><i class="fa-solid fa-database"></i><span>MongoDB</span></div>
+          <div class="tech-chip tech-fire"><i class="fa-solid fa-fire"></i><span>Firebase</span></div>
+          <div class="tech-chip tech-cloud"><i class="fa-solid fa-cloud"></i><span>Cloud</span></div>
+          <div class="tech-chip tech-shield"><i class="fa-solid fa-shield-halved"></i><span>Security</span></div>
+          <div class="tech-chip tech-brain"><i class="fa-solid fa-brain"></i><span>GenAI</span></div>
+          <div class="tech-chip tech-chain"><i class="fa-solid fa-cube"></i><span>Blockchain</span></div>
+          <div class="tech-chip tech-arch"><i class="fa-solid fa-diagram-project"></i><span>Architecture</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONNECT -->
+    <section class="page" id="connect" aria-label="Connect">
+      <div class="container">
+        <h2 class="section-title reveal">Connect</h2>
+
+        <div class="contact-card reveal">
+          <p class="muted">
+            Open to internships, collabs, and cool problems. DM me or drop a note.
+          </p>
+
+          <div class="cta-row">
+            <a class="btn primary" id="emailBtn" href="mailto:Ashushekhar2442@gmail.com">
+              <i class="fa-regular fa-envelope"></i> Email
+            </a>
+
+            <a class="btn" href="https://github.com/Asky03" target="_blank" rel="noopener">
+              <i class="fa-brands fa-github"></i> GitHub
+            </a>
+
+            <a class="btn" href="https://www.linkedin.com/in/ashutoshs27/" target="_blank" rel="noopener">
+              <i class="fa-brands fa-linkedin-in"></i> LinkedIn
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container muted">
+      © <span id="year"></span> Ashutosh Shekhar • All Rights Reserved
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -710,52 +710,58 @@ h1{
 .cert-orbit-card.is-active {
   opacity: 1;
   pointer-events: auto;
-  z-index: 6;
-  transform: translate(-50%, -50%) scale(1.04) rotateY(0deg);
-  filter: blur(0px);
+  z-index: 8;
+  transform: translate(-50%, -50%) scale(1.08) rotateY(0deg);
+  filter: blur(0px) brightness(1.02);
 }
 
 .cert-orbit-card.is-active .cert-orbit-face {
-  border-color: rgba(82,214,255,.26);
+  border-color: rgba(82,214,255,.34);
   box-shadow:
-    0 24px 64px rgba(45,57,255,.22),
-    0 0 28px rgba(82,214,255,.08),
-    inset 0 0 0 1px rgba(82,214,255,.05);
+    0 26px 70px rgba(45,57,255,.24),
+    0 0 34px rgba(82,214,255,.10),
+    inset 0 0 0 1px rgba(82,214,255,.08);
 }
 
 .cert-orbit-card.is-active .cert-orbit-front h3 {
-  font-size: 1.28rem;
+  font-size: 1.42rem;
   letter-spacing: .2px;
+  color: #ffffff;
+}
+
+.cert-orbit-card.is-active .cert-orbit-front p {
+  color: #d8e4ff;
+  font-weight: 700;
 }
 
 .cert-orbit-card.is-prev {
-  opacity: .68;
+  opacity: .34;
   pointer-events: auto;
   z-index: 5;
-  transform: translate(calc(-50% - 250px), -50%) scale(.88) rotateY(18deg);
-  filter: blur(.2px) brightness(.86);
+  transform: translate(calc(-50% - 290px), -50%) scale(.80) rotateY(18deg);
+  filter: blur(1px) brightness(.72);
 }
 
 .cert-orbit-card.is-next {
-  opacity: .68;
+  opacity: .34;
   pointer-events: auto;
   z-index: 5;
-  transform: translate(calc(-50% + 250px), -50%) scale(.88) rotateY(-18deg);
-  filter: blur(.2px) brightness(.86);
+  transform: translate(calc(-50% + 290px), -50%) scale(.80) rotateY(-18deg);
+  filter: blur(1px) brightness(.72);
 }
 
 .cert-orbit-card.is-back-prev {
-  opacity: .26;
+  opacity: .14;
   z-index: 3;
-  transform: translate(calc(-50% - 390px), -50%) scale(.72) rotateY(24deg);
-  filter: blur(1.8px) brightness(.72);
+  transform: translate(calc(-50% - 430px), -50%) scale(.66) rotateY(22deg);
+  filter: blur(3px) brightness(.55);
 }
 
 .cert-orbit-card.is-back-next {
-  opacity: .26;
+  opacity: .14;
   z-index: 3;
-  transform: translate(calc(-50% + 390px), -50%) scale(.72) rotateY(-24deg);
-  filter: blur(1.8px) brightness(.72);
+  transform: translate(calc(-50% + 430px), -50%) scale(.66) rotateY(-22deg);
+  filter: blur(3px) brightness(.55);
 }
 
 .cert-orbit-card.is-hidden {

@@ -770,6 +770,10 @@ h1{
    Reduced spacing version
    ========================================================= */
 .tech-section {
+  min-height: auto !important;
+  display: block !important;
+  padding-top: 110px;
+  padding-bottom: 40px;
   overflow: hidden;
 }
 
@@ -777,8 +781,8 @@ h1{
   position: relative;
   width: 100%;
   overflow: hidden;
-  margin-top: 8px;
-  padding: 6px 0 2px;
+  margin-top: 6px;
+  padding: 2px 0 0;
 }
 
 .tech-horizontal-wrap::before,

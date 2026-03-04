@@ -612,7 +612,7 @@ h1{
   inset: 0;
   border-radius: 28px;
   border: 1px solid rgba(255,255,255,.12);
-  background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.018));
+  background: linear-gradient(180deg, rgba(11,18,40,.78), rgba(8,12,28,.92));
   backdrop-filter: blur(12px);
   box-shadow:
     0 18px 50px rgba(0,0,0,.30),

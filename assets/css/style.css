@@ -1117,3 +1117,44 @@ section[id]{ scroll-margin-top: 96px; }
   .btn, .card, .cert-orbit-card, .cert-orbit-inner, .reveal { transition: none !important; }
   .tech-horizontal-track { animation: none !important; }
 }
+
+/* =========================
+   Featured banner: fade + slide animation
+   ========================= */
+
+/* Base: hidden */
+.featured-project{
+  display: grid;                 /* keep it renderable so it can animate */
+  max-height: 0;
+  opacity: 0;
+  transform: translateY(10px);
+  overflow: hidden;
+  pointer-events: none;
+  margin: 0;                     /* remove gap when hidden */
+
+  transition:
+    max-height 380ms ease,
+    opacity 260ms ease,
+    transform 260ms ease,
+    margin 260ms ease;
+}
+
+/* Visible state */
+.featured-project.is-visible{
+  max-height: 900px;             /* enough to fit the banner */
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+  margin: 4px 0 22px;            /* restores spacing */
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce){
+  .featured-project{
+    transition: none !important;
+    max-height: none;
+    opacity: 1;
+    transform: none;
+    margin: 4px 0 22px;
+  }
+}

@@ -360,3 +360,171 @@ I saw your portfolio and would love to connect about...`;
   applyPositions();
   startAutoRotate();
 })();
+
+// ===== Subtle tilt on hero highlight card (optional premium effect) =====
+(function () {
+  const card = document.querySelector('.hero-highlight');
+  if (!card) return;
+
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (prefersReduced) return;
+
+  card.addEventListener('mousemove', (e) => {
+    const r = card.getBoundingClientRect();
+    const x = (e.clientX - r.left) / r.width - 0.5;
+    const y = (e.clientY - r.top) / r.height - 0.5;
+    card.style.transform = `rotateY(${x * 6}deg) rotateX(${y * -6}deg) translateY(-2px)`;
+  });
+
+  card.addEventListener('mouseleave', () => {
+    card.style.transform = 'none';
+  });
+})();
+
+// ===============================
+// PART 2: Project Filter Chips
+// ===============================
+(function () {
+  const chips = document.querySelectorAll('.chip-btn[data-filter]');
+  const cards = document.querySelectorAll('#projects .grid .card');
+
+  if (!chips.length || !cards.length) return;
+
+  function setActiveChip(activeBtn) {
+    chips.forEach(btn => {
+      const active = btn === activeBtn;
+      btn.classList.toggle('is-active', active);
+      btn.setAttribute('aria-selected', active ? 'true' : 'false');
+    });
+  }
+
+  function applyFilter(filter) {
+    const f = (filter || 'all').toLowerCase();
+
+    cards.forEach(card => {
+      const tags = (card.getAttribute('data-tags') || '').toLowerCase();
+      const show = f === 'all' || tags.split(/\s+/).includes(f);
+      card.classList.toggle('is-hidden-card', !show);
+    });
+  }
+
+  chips.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const filter = btn.getAttribute('data-filter');
+      setActiveChip(btn);
+      applyFilter(filter);
+    });
+  });
+
+  // default
+  applyFilter('all');
+})();
+
+// ===============================
+// PART 2: Project Modal Preview
+// ===============================
+(function () {
+  const modal = document.getElementById('projectModal');
+  if (!modal) return;
+
+  const titleEl = document.getElementById('modalTitle');
+  const tagsEl = document.getElementById('modalTags');
+  const descEl = document.getElementById('modalDesc');
+  const pointsEl = document.getElementById('modalPoints');
+  const codeBtn = document.getElementById('modalCode');
+  const liveBtn = document.getElementById('modalLive');
+
+  function openModal(payload) {
+    titleEl.textContent = payload.title || 'Project';
+    tagsEl.textContent = payload.tags || '';
+    descEl.textContent = payload.desc || '';
+
+    pointsEl.innerHTML = '';
+    (payload.points || []).forEach(p => {
+      const div = document.createElement('div');
+      div.className = 'modal-point';
+      div.innerHTML = `<i class="fa-solid fa-check"></i><div>${p}</div>`;
+      pointsEl.appendChild(div);
+    });
+
+    if (payload.code) {
+      codeBtn.href = payload.code;
+      codeBtn.style.display = '';
+    } else {
+      codeBtn.style.display = 'none';
+    }
+
+    if (payload.live) {
+      liveBtn.href = payload.live;
+      liveBtn.style.display = '';
+    } else {
+      liveBtn.style.display = 'none';
+    }
+
+    modal.classList.add('is-open');
+    modal.setAttribute('aria-hidden', 'false');
+
+    // lock scroll
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    modal.classList.remove('is-open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  // open triggers
+  document.querySelectorAll('.fp-modal-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const title = btn.getAttribute('data-modal-title') || '';
+      const tags = btn.getAttribute('data-modal-tags') || '';
+      const desc = btn.getAttribute('data-modal-desc') || '';
+      const pointsRaw = btn.getAttribute('data-modal-points') || '';
+      const points = pointsRaw.split('|').map(s => s.trim()).filter(Boolean);
+
+      let links = {};
+      try { links = JSON.parse(btn.getAttribute('data-modal-links') || '{}'); } catch(e){}
+
+      openModal({
+        title,
+        tags,
+        desc,
+        points,
+        code: links.code,
+        live: links.live
+      });
+    });
+  });
+
+  // close triggers
+  modal.querySelectorAll('[data-close]').forEach(el => el.addEventListener('click', closeModal));
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('is-open')) closeModal();
+  });
+})();
+
+// ===============================
+// PART 2: Magnetic Buttons (subtle)
+// Add class="magnetic" to any button/link to enable
+// ===============================
+(function () {
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (prefersReduced) return;
+
+  const items = document.querySelectorAll('.magnetic');
+  if (!items.length) return;
+
+  items.forEach(el => {
+    el.addEventListener('mousemove', (e) => {
+      const r = el.getBoundingClientRect();
+      const x = (e.clientX - r.left) / r.width - 0.5;
+      const y = (e.clientY - r.top) / r.height - 0.5;
+      el.style.transform = `translate(${x * 6}px, ${y * 6}px)`;
+    });
+
+    el.addEventListener('mouseleave', () => {
+      el.style.transform = '';
+    });
+  });
+})();

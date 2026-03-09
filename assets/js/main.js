@@ -463,3 +463,24 @@ I saw your portfolio and would love to connect about...`;
     });
   });
 })();
+
+// ===============================
+// Projects Search (filters small cards)
+// ===============================
+(() => {
+  const input = document.getElementById('projectSearch');
+  const cards = Array.from(document.querySelectorAll('#projects .grid .card'));
+  if (!input || !cards.length) return;
+
+  function norm(s){ return (s || '').toLowerCase().trim(); }
+
+  input.addEventListener('input', () => {
+    const q = norm(input.value);
+
+    cards.forEach(card => {
+      const text = norm(card.innerText);
+      const show = !q || text.includes(q);
+      card.classList.toggle('is-hidden-card', !show);
+    });
+  });
+})();

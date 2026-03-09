@@ -700,7 +700,7 @@ section[id]{ scroll-margin-top: 96px; }
 .cert-orbit-ring{
   width: 100%;
   height: 100%;
-  border-radius: 18px;
+  border-radius: 20px;
   border: 1px solid rgba(255,255,255,.12);
   background:
     linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.018));
@@ -708,7 +708,7 @@ section[id]{ scroll-margin-top: 96px; }
   align-content: center;
   justify-items: center;
   text-align: center;
-  padding: 18px;
+  padding: 26px;
   gap: 10px;
   position: relative;
   overflow: hidden;
@@ -783,32 +783,37 @@ section[id]{ scroll-margin-top: 96px; }
   transform: translate(-50%, -50%) scale(1.08) rotateY(0deg);
   filter: blur(0px) brightness(1.02);
 }
-.cert-orbit-card.is-prev {
-  opacity: .34;
+
+.cert-orbit-card.is-prev{
+  opacity: .35;
   pointer-events: auto;
   z-index: 5;
-  transform: translate(calc(-50% - 290px), -50%) scale(.80) rotateY(18deg);
-  filter: blur(1px) brightness(.72);
+  transform: translate(calc(-50% - 420px), -50%) scale(.82) rotateY(14deg);
+  filter: blur(1px) brightness(.70);
 }
-.cert-orbit-card.is-next {
-  opacity: .34;
+
+.cert-orbit-card.is-next{
+  opacity: .35;
   pointer-events: auto;
   z-index: 5;
-  transform: translate(calc(-50% + 290px), -50%) scale(.80) rotateY(-18deg);
-  filter: blur(1px) brightness(.72);
+  transform: translate(calc(-50% + 420px), -50%) scale(.82) rotateY(-14deg);
+  filter: blur(1px) brightness(.70);
 }
-.cert-orbit-card.is-back-prev {
-  opacity: .14;
+
+.cert-orbit-card.is-back-prev{
+  opacity: .12;
   z-index: 3;
-  transform: translate(calc(-50% - 430px), -50%) scale(.66) rotateY(22deg);
+  transform: translate(calc(-50% - 650px), -50%) scale(.68) rotateY(18deg);
   filter: blur(3px) brightness(.55);
 }
-.cert-orbit-card.is-back-next {
-  opacity: .14;
+
+.cert-orbit-card.is-back-next{
+  opacity: .12;
   z-index: 3;
-  transform: translate(calc(-50% + 430px), -50%) scale(.66) rotateY(-22deg);
+  transform: translate(calc(-50% + 650px), -50%) scale(.68) rotateY(-18deg);
   filter: blur(3px) brightness(.55);
 }
+
 .cert-orbit-card.is-hidden {
   opacity: 0;
   z-index: 1;
@@ -1096,8 +1101,8 @@ section[id]{ scroll-margin-top: 96px; }
   .cert-3d-wrap{ min-height: 500px; }
   .cert-stack{ height: 460px; }
   .cert-orbit-card{
-  width: min(310px, 88vw);
-  aspect-ratio: 1/1.414; /* A-series portrait (A4-like) */
+  width: min(640px, 92vw);
+  aspect-ratio: 4/3; /* A-series portrait (A4-like) */
   height: auto;
 
   /* keep your existing styles below (position/transition etc.) */
@@ -1123,6 +1128,27 @@ section[id]{ scroll-margin-top: 96px; }
   }
   .fp-content{ padding:16px; }
   .fp-top, .featured-project h3, .featured-project p, .fp-bullets, .fp-tech, .fp-actions{ padding-left:0; }
+}
+
+@media (max-width: 900px){
+  .cert-orbit-card{
+    width: min(92vw, 520px);
+    aspect-ratio: 4 / 3;
+  }
+
+  /* On mobile keep only active visible */
+  .cert-orbit-card.is-prev,
+  .cert-orbit-card.is-next{
+    opacity: .18;
+    transform: translate(-50%, -50%) scale(.86);
+    filter: blur(2px) brightness(.62);
+  }
+
+  .cert-orbit-card.is-back-prev,
+  .cert-orbit-card.is-back-next,
+  .cert-orbit-card.is-hidden{
+    opacity: 0;
+  }
 }
 
 @media (max-width: 640px){

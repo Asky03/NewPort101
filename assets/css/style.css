@@ -1123,8 +1123,8 @@ section[id]{ scroll-margin-top: 96px; }
   }
   .fp-media{
     border-right:none;
-    border-bottom: 1px solid rgba(255,255,255,.06);
-    min-height: 260px;
+    border-bottom: 1px solid rgba(255,255,255,.07);
+    min-height: 258px;
   }
   .fp-content{ padding:16px; }
   .fp-top, .featured-project h3, .featured-project p, .fp-bullets, .fp-tech, .fp-actions{ padding-left:0; }

@@ -20,7 +20,7 @@ A premium dark glassmorphism portfolio built with Next.js, featuring smooth anim
   - ARIA labels and roles
   - Reduced motion support
 - **Performance**: 
-  - Next.js font optimization
+  - Next.js font optimization 
   - Lazy loading
   - Optimized animations
   - Lighthouse scores 90+
@@ -99,7 +99,7 @@ export const projects: Project[] = [
     category: 'Generative AI' | 'Cloud' | 'Blockchain' | 'Web',
     tags: ['tag1', 'tag2'],
     tech: ['Tech1', 'Tech2'],
-    codeUrl: 'https://github.com/...',
+    codeUrl: 'https://github.com/.',
     liveUrl: 'https://...',
     whatIBuilt: 'Detailed description',
     challenges: 'Technical challenges',
@@ -125,7 +125,6 @@ export const projects: Project[] = [
 npm run dev      # Start development server
 npm run build    # Build for production
 npm run start    # Start production server
-npm run lint     # Run ESLint
 \`\`\`
 
 ## 🚢 Deployment
